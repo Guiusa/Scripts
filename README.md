@@ -7,7 +7,6 @@ styles on printing in terminal. Colors.sh includes color codes and type of font
 codes, as bold, italic, dashed etc.
 
 [USAGE]
-
 colors
 
 ## asm.sh
@@ -17,7 +16,6 @@ and let the user choose if the object file generated in compilation will be
 maintained or not.
 
 [USAGE]
-
 asm <ASSEMBLY_FILE>
 
 ## window.sh
@@ -25,5 +23,4 @@ Takes a file and extracts from lineX to lineY. Exactly what sed -n line1,line2p
 would do, but more intuitive
 
 [USAGE]
-
-window <LINE1> <LINE2> <FILE>
+window <FIRST_LINE> <LAST_LINE2> <FILE>
