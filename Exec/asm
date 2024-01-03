@@ -11,6 +11,8 @@ Pname=`echo ${1} | cut -d '.' -f1`
 read -p "Maintain obejct file (.o) after compilation? (N)/y " objMa
 
 as ${Fname} -o ${Pname}.o -g
-ld ${Pname}.o -o ${Pname} -g
+ld ${Pname}.o -o ${Pname} -dynamic-linker /lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 \
+/usr/lib/crt1.o /usr/lib/crti.o \
+/usr/lib/crtn.o -lc
 
 [[ "${objMa}" != "y" ]] && [[ "${objMa}" != "Y" ]] && rm ${Pname}.o
